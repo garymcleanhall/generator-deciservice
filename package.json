@@ -1,6 +1,6 @@
 {
   "name": "generator-deciservice",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Microservice generator",
   "homepage": "https://www.github.com/garymcleanhall/generator-deciservice",
   "author": {
