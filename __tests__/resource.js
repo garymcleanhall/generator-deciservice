@@ -4,10 +4,11 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
 describe('generator-muservice:resource', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     return helpers.run(path.join(__dirname, '../generators/resource'))
       .withPrompts({
         name: 'user',
+        type: 'collection',
         operations: [
           'create',
           'read',
@@ -15,10 +16,28 @@ describe('generator-muservice:resource', () => {
         ]
       });
   });
-
-  it('creates files', () => {
+  it('creates plural file for collections', () => {
     assert.file([
       'src/routes/users.js'
+    ]);
+  });
+});
+
+describe('generator-muservice:resource', () => {
+  beforeEach(() => {
+    return helpers.run(path.join(__dirname, '../generators/resource'))
+      .withPrompts({
+        name: 'user',
+        type: 'document',
+        operations: [
+          'read',
+          'delete'
+        ]
+      });
+  });
+  it('creates singular file for document', () => {
+    assert.file([
+      'src/routes/user.js'
     ]);
   });
 });
