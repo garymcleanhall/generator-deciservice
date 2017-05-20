@@ -1,0 +1,25 @@
+{
+  "name": "<% appName %>",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {<% if (testEnv) { %>
+    "test": "NODE_ENV=test ./node_modules/.bin/jasmine tests/*"<% } %>
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "http-status": "^1.0.1",<% if (includeHealthcheck) { %>
+    "physical-express-middleware": "^0.2.2", <% if (includeMongo) { %>
+    "physical-mongodb": "^0.1.0", <% } } %>
+    "pm2": "^2.4.6"
+  },
+  "devDependencies": {
+    "jasmine": "^2.6.0",
+    "jasmine-node": "^1.14.5",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
