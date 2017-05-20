@@ -15,14 +15,14 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the well-made ' + chalk.red('generator-muservice') + ' generator!'
+      'Welcome to the well-made ' + chalk.red('generator-deciservice') + ' generator!'
     ));
 
     const prompts = [
       {
         type: 'input',
         name: 'appName',
-        message: 'What is this μ-service called?',
+        message: 'What is this deci-service called?',
         default: this.options.name || this.appname
       },
       {

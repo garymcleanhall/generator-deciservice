@@ -3,7 +3,7 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-muservice:resource', () => {
+describe('generator-deciservice:resource', () => {
   beforeEach(() => {
     return helpers.run(path.join(__dirname, '../generators/resource'))
       .withPrompts({
@@ -23,7 +23,7 @@ describe('generator-muservice:resource', () => {
   });
 });
 
-describe('generator-muservice:resource', () => {
+describe('generator-deciservice:resource', () => {
   beforeEach(() => {
     return helpers.run(path.join(__dirname, '../generators/resource'))
       .withPrompts({

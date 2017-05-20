@@ -9,7 +9,7 @@ module.exports = class extends Generator {
   prompting() {
     if (!this.options.nested) {
       this.log(yosay(
-      'Welcome to the slick ' + chalk.red('generator-muservice') + ' generator!'
+      'Welcome to the slick ' + chalk.red('generator-deciservice') + ' generator!'
       ));
     }
 

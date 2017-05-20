@@ -1,8 +1,8 @@
 {
-  "name": "generator-muservice",
+  "name": "generator-deciservice",
   "version": "0.0.0",
   "description": "Microservice generator",
-  "homepage": "https://www.github.com/garymcleanhall/generator-muservice",
+  "homepage": "https://www.github.com/garymcleanhall/generator-deciservice",
   "author": {
     "name": "Gary McLean Hall",
     "email": "gary@igirisu.co",
@@ -14,6 +14,7 @@
   "main": "generators/index.js",
   "keywords": [
     "microservice",
+    "deciservice",
     "yeoman-generator"
   ],
   "devDependencies": {
@@ -45,6 +46,6 @@
       "node": true
     }
   },
-  "repository": "garymcleanhall/generator-muservice",
+  "repository": "garymcleanhall/generator-deciservice",
   "license": "MIT"
 }

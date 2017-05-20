@@ -1,19 +1,19 @@
-# generator-muservice [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-deciservice [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > Microservice generator
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-muservice using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-deciservice using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-muservice
+npm install -g generator-deciservice
 ```
 
 Then generate your new project:
 
 ```bash
-yo muservice
+yo deciservice
 ```
 
 ## Getting To Know Yeoman
@@ -28,9 +28,9 @@ yo muservice
 MIT © [Gary McLean Hall]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-muservice.svg
-[npm-url]: https://npmjs.org/package/generator-muservice
-[travis-image]: https://travis-ci.org/garymcleanhall/generator-muservice.svg?branch=master
-[travis-url]: https://travis-ci.org/garymcleanhall/generator-muservice
-[daviddm-image]: https://david-dm.org/garymcleanhall/generator-muservice.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/garymcleanhall/generator-muservice
+[npm-image]: https://badge.fury.io/js/generator-deciservice.svg
+[npm-url]: https://npmjs.org/package/generator-deciservice
+[travis-image]: https://travis-ci.org/garymcleanhall/generator-deciservice.svg?branch=master
+[travis-url]: https://travis-ci.org/garymcleanhall/generator-deciservice
+[daviddm-image]: https://david-dm.org/garymcleanhall/generator-deciservice.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/garymcleanhall/generator-deciservice
