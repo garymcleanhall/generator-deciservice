@@ -6,17 +6,14 @@ const
 
 const api = express()
 
-api.use(require('./routes/root'))
-<% if (includeHealthcheck) { %>
-api.use(require('./routes/healthcheck'))
-<% } %>
+require('./routes')(api)
 
 let server = null
 
 function start() {
   return new Promise((resolve, reject) => {
     server = api.listen(config.service.port, () => {
-      console.log(`Templates listening on ${config.service.port}`)
+      console.log(`<%= appName %> listening on ${config.service.port}`)
       resolve()
     })
 
@@ -34,3 +31,5 @@ module.exports = {
   start,
   stop
 }
+
+/// Note: A subgenerator will append more routes to this file

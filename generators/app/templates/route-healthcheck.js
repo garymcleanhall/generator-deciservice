@@ -4,7 +4,7 @@ const
   config = require('../config')
 
 const physical = {
-  middleware: require('physical-express-middleware'),<% if (resources) { %>
+  middleware: require('physical-express-middleware'),<% if (includeMongo) { %>
   mongodb: require('physical-mongodb') <% } %>
 }
 
@@ -15,7 +15,7 @@ healthcheckRoute
   .get(physical.middleware({
     dependencies: [
       <% for (var resource in resources) { %>
-      { name: '<% resource.name %>Data', checker: () => (physical.mongodb.check(config.data.<% resource.name %>.uri)) }
+      { name: '<%= resource.name %>Data', checker: () => (physical.mongodb.check(config.data.<%= resource.name %>.uri)) }
       <% } %>
     ]
   }))

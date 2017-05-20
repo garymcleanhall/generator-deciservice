@@ -26,6 +26,7 @@ describe('generator-muservice:app', () => {
       'src/config/config.test.json',
       'src/config/config.live.json',
       'src/config/config.staging.json',
+      'src/routes/index.js',
       'src/routes/root.js',
       'src/routes/healthcheck.js',
       'package.json'
