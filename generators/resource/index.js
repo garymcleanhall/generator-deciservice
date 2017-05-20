@@ -5,11 +5,13 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
+
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(yosay(
+    if (!this.options.nested) {
+      this.log(yosay(
       'Welcome to the slick ' + chalk.red('generator-muservice') + ' generator!'
-    ));
+      ));
+    }
 
     const prompts = [
       {

@@ -4,6 +4,14 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
+
+  constructor(args, opts) {
+    super(args, opts);
+
+    this.option('name', {type: String});
+    this.option('port', {type: Number});
+  }
+
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
@@ -15,7 +23,13 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'appName',
         message: 'What is this μ-service called?',
-        default: this.appname
+        default: this.options.name || this.appname
+      },
+      {
+        type: 'input',
+        name: 'port',
+        message: 'What port would you like to use?',
+        default: this.options.port || 3000
       },
       {
         type: 'confirm',
@@ -29,6 +43,12 @@ module.exports = class extends Generator {
         choices: ['local', 'dev', 'staging', 'beta', 'live', 'production', 'test'],
         message: 'Which environments would you like to support?',
         default: ['dev', 'test', 'staging', 'production']
+      },
+      {
+        type: 'confirm',
+        name: 'createResource',
+        message: 'Would you like to create a resource?',
+        default: true
       }
     ];
 
@@ -88,6 +108,15 @@ module.exports = class extends Generator {
         this.destinationPath(`src/config/config.${env}.json`),
         this.props
       );
+    }
+
+    if (this.props.createResource) {
+      this.composeWith(require.resolve('./../resource'), {
+        nested: true,
+        bower: false,
+        npm: false,
+        appname: this.appName
+      });
     }
   }
 

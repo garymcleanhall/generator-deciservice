@@ -10,6 +10,7 @@ describe('generator-muservice:app', () => {
         appName: 'my-app',
         includeHealthcheck: true,
         resources: [],
+        resource: false,
         environments: [
           'test',
           'live',
