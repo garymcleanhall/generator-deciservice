@@ -49,6 +49,12 @@ module.exports = class extends Generator {
         name: 'createResource',
         message: 'Would you like to create a resource?',
         default: true
+      },
+      {
+        type: 'confirm',
+        name: 'createRecord',
+        message: 'Would you like to create a record?',
+        default: false
       }
     ];
 
@@ -121,6 +127,15 @@ module.exports = class extends Generator {
         bower: false,
         npm: false,
         appname: this.appName
+      });
+    }
+    if (this.props.createRecord) {
+      this.composeWith(require.resolve('./../record'), {
+        nested: true,
+        bower: false,
+        npm: false,
+        appname: this.appName,
+        envs: this.props.environments
       });
     }
   }

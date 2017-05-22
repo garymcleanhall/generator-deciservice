@@ -12,8 +12,9 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "http-status": "^1.0.1",<% if (includeHealthcheck) { %>
-    "physical-express-middleware": "^0.2.2", <% if (includeMongo) { %>
-    "physical-mongodb": "^0.1.0", <% } } %>
+    "physical-express-middleware": "^0.2.2", <% if (createRecord) { %>
+    "physical-mongodb": "^0.1.0", <% } } %><% if (createRecord) { %>
+    "mongoose": "^4.9.8",<% } %>
     "pm2": "^2.4.6",
     "config-directory": "^0.2.0"
   },
