@@ -1,7 +1,5 @@
 'use strict'
 
-'use strict';
-
 const
   config = require('../config'),
   mongoose = require('mongoose'),
@@ -110,14 +108,14 @@ function _delete<%= nameCapitalized %>(<%= name %>Id) {
         .delete({ _id: <%= name %>Id })
         .exec()
     })
-    catch(error => {
+    .catch(error => {
       console.error('Could not delete <%= name %>', error)
       throw error
     })
 }
 
 module.exports = {
-  delete<%= nameCapitalized %>: _delete<%= nameCapitalized %>
+  delete<%= nameCapitalized %>: _delete<%= nameCapitalized %>,
   save<%= nameCapitalized %>Data: _save<%= nameCapitalized %>Data,
   update<%= nameCapitalized %>Data: _update<%= nameCapitalized %>Data,
   getAll<%= nameCapitalized %>s: _getAll<%= nameCapitalized %>s,
