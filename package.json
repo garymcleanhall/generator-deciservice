@@ -1,6 +1,6 @@
 {
   "name": "generator-deciservice",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Microservice generator",
   "homepage": "https://www.github.com/garymcleanhall/generator-deciservice",
   "author": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "eslint": "^3.18.0",
     "eslint-config-xo-space": "^0.16.0",
+    "glob": "^7.1.2",
     "jasmine-node": "^1.14.5",
     "jest": "^19.0.2",
     "jest-cli": "^19.0.1",
