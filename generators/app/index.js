@@ -109,8 +109,8 @@ module.exports = class extends Generator {
     for (var i = 0; i < this.props.environments.length; i++) {
       var env = this.props.environments[i];
       this.fs.copyTpl(
-        this.templatePath('config.api.json'),
-        this.destinationPath(`src/config/${env}/api.json`),
+        this.templatePath('config.service.json'),
+        this.destinationPath(`src/config/${env}/service.json`),
         this.props
       );
     }
