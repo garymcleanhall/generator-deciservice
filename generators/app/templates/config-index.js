@@ -2,4 +2,4 @@
 
 const configDirectory = require('config-directory')
 
-module.exports = configDirectory
+module.exports = configDirectory(__dirname)
