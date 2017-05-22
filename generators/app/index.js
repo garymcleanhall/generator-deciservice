@@ -101,11 +101,16 @@ module.exports = class extends Generator {
         this.props
       );
     }
+    this.fs.copyTpl(
+        this.templatePath('config-index.js'),
+        this.destinationPath(`src/config/index.js`),
+        this.props
+      );
     for (var i = 0; i < this.props.environments.length; i++) {
       var env = this.props.environments[i];
       this.fs.copyTpl(
-        this.templatePath('config.env.json'),
-        this.destinationPath(`src/config/config.${env}.json`),
+        this.templatePath('config.api.json'),
+        this.destinationPath(`src/config/${env}/api.json`),
         this.props
       );
     }
