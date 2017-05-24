@@ -7,7 +7,7 @@ describe('generator-deciservice:record', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/record'))
       .withOptions({
-        envs: ['local', 'live']
+        envs: 'local,live'
       })
       .withPrompts({
         name: 'user'

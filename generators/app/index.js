@@ -135,7 +135,7 @@ module.exports = class extends Generator {
         bower: false,
         npm: false,
         appname: this.appName,
-        envs: this.props.environments
+        envs: this.props.environments.join(',')
       });
     }
   }

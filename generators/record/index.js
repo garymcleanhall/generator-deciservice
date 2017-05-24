@@ -4,6 +4,13 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
+
+  constructor(args, opts) {
+    super(args, opts);
+
+    this.option('envs', {type: raw => (raw.split(','))});
+  }
+
   prompting() {
     // Have Yeoman greet the user.
     if (!this.options.nested) {
